@@ -31,7 +31,7 @@
 
 <div class="topbar" id="myTopbar">
   <span class="closebtn" onclick="closeTopbar()">&times;</span>
-<p style="color: white;">Ip Server Baru : 45.146.6.130:7809</p>
+<p style="color: white;">Ip Server Baru : 128.199.234.72:50019</p>
 </div>
 
 <h2>MANTIC COUNTRY</h2>
@@ -43,44 +43,41 @@
 <html>
 <head>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<title>Website dengan Navbar Animasi</title>
 <style>
     body {
-        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        font-family: Arial, sans-serif;
     }
-
-    .navbar {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background-color: #fff;
-        width: 200px;
-        height: 100vh;
-        padding: 20px 50px;
-        border: 3px solid #539659;
-        border-radius: 2%;
-        
-        
-    }
-
     .navbar a {
         color: #5c5c5c;
         text-decoration: none;
         display: block;
         padding: 10px 0;
     }
-
-    .nav-toggle {
-      position: absolute;
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -310px;
+        height: 100vh;
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #00ff00;
+        border-radius: 1%;
+        transition: 0.5s;
+        }
+        
+    .navbar.show {
+        right: 0;
+    }
+    .menu-toggle {
+       position: absolute;
   top: 15%;
   right: 10px;
   padding: 10px 20px;
@@ -91,46 +88,63 @@
   cursor: pointer;
     }
     button {
-            background-color: #3dc185;
-            color: white;
-            padding: 10px 70px; 
-            margin: 7px 0px;
-            border: none;
-            cursor: pointer;
-            width: 30px 50px
-            font-size: 16px;
-            border-radius: 4px;
-            
-            }
+        background-color: #3dc185;
+        color: white;
+        padding: 10px 60px; 
+        margin: 7px 0px;
+        border: none;
+        cursor: pointer;
+        width: 30px 50px;
+        font-size: 16px;
+        border-radius: 4px;
+    }
 </style>
 </head>
 <body>
-
-<div class="navbar" id="navbar">
-				<button id="whitelistButton">whitelist</button>
-    <a href="https://chat.whatsapp.com/FkW9JBnqCVrI273LbpcFKf">Grup WhatsApp</a>
+    <div class="navbar" id="navbar">
+        <br>
+        <center>
+          	<button id="whitelistButton">whitelist</button>
+        </center>
+        <ul>
+            <a href="https://chat.whatsapp.com/FkW9JBnqCVrI273LbpcFKf">Grup WhatsApp</a>
     <a href="https://redeem-mantic.vercel.app/">Code Redeem</a>
     <a href="https://mystery-shop-mantic.vercel.app/">Mystery Shop</a>
     <a href="https://elite-pass-mantic.vercel.app/">Elite Pass</a>
     <a href="https://m.kaskus.co.id/thread/60382e695070b435ca13648f/arti-dan-penjelasan-break-rules-gta-samp">Rules</a>
-   
-</div>
+     <a href="https://kenon-wa.vercel.app/">KENON WA</a>
+        </ul>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    
+    <script>
+        const navbar = document.getElementById('navbar');
+        const menuToggle = document.getElementById('menu-toggle');
+        
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+        });
+    </script>
 
-<div class="nav-toggle" onclick="toggleNavbar()">☰</div>
-
-<script>
-    function toggleNavbar() {
-        var navbar = document.getElementById('navbar');
-        if (navbar.style.display === 'block') {
-            navbar.style.display = 'none';
-        } else {
-            navbar.style.display = 'block';
+    <script>
+        function toggleText() {
+            var buttonText = document.getElementById("menu-toggle").textContent;
+            document.getElementById("menu-toggle").textContent = buttonText === "☰" ? "X" : "☰";
         }
-    }
-</script>
 
+        document.getElementById("menu-toggle").addEventListener("click", toggleText);
+    </script>
 </body>
 </html>
+
+
+			<script>
+function redirectToLink() {
+  window.location.href = "https://wlmantic.vercel.app/";
+}
+
+document.getElementById("whitelistButton").addEventListener("click", redirectToLink);
+</script>
 
 			<!DOCTYPE html>
 <html lang="en">
@@ -271,7 +285,7 @@ padding: 17px;
 <body>
 <p>San Andreas News Radio</p>
 <audio controls>
-<source src="https://neptunus-roleplay.vercel.app/np.mp3" type="audio/mpeg">
+<source src="../np.mp3" type="audio/mpeg">
 Your browser does not support the audio tag.
 </audio>
 
